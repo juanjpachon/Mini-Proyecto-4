@@ -10,6 +10,8 @@ ALTO = 600
 BLANCO = (255, 255, 255)
 NEGRO = (0, 0, 0)
 
+
+
 # Crear ventana
 ventana = pygame.display.set_mode((ANCHO, ALTO))
 pygame.display.set_caption('Entrenador Personal BodyBuilder')

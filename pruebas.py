@@ -32,8 +32,7 @@ ejercicios = [
     Ejercicio("Flexiones", 10, 3),
     Ejercicio("Sentadillas", 15, 3),
     Ejercicio("plancha", 12, 3),
-    Ejercicio("abdominal", 12, 3),
-jjjjjjjjjjj
+
 ]
 
 # Función para mostrar el menú principal

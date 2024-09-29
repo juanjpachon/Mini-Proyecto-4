@@ -126,7 +126,7 @@ def show_pressBanca():
 
 def show_CurlBicep():
     window.fill(BLUE)
-    show_text('Curl bicep', fuente_titulo, BLACK, 250, 50)
+    show_text('Curl bicep', fuente_titulo, BLACK, 300, 50)
     show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
     show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
     show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
@@ -138,7 +138,26 @@ def show_CurlBicep():
 
 def show_plancha():
     window.fill(BLUE)
-    show_text('Plancha', fuente_titulo, BLACK, 250, 50)
+    show_text('Plancha', fuente_titulo, BLACK, 300, 50)
+    show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
+    show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
+    show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
+    draw_grid()
+    draw_button(450, 500, 150, 50, ORANGE, GRAY, 'Finalizar', BLACK)
+    draw_button(200, 500, 150, 50, BLACK, GRAY,  'Regresar', WHITE)
+    pygame.display.update()
+
+def show_congratulations():
+    window.fill(BLUE)
+    draw_grid()
+    show_text('Felicitaciones ', fuente_titulo, BLACK, 280, 50)
+    show_text("Llegaste al final de tu rutina, eres un ¡crack!", fuente_texto, BLACK,175, 150)
+    draw_button(300, 450, 200, 100, PURPLE, GRAY,  'Finalizar', WHITE)
+    pygame.display.update()
+
+def show_extensionRodillas():
+    window.fill(BLUE)
+    show_text('Extension Rodilla', fuente_titulo, BLACK, 250, 50)
     show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
     show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
     show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
@@ -146,7 +165,42 @@ def show_plancha():
     draw_button(450, 500, 150, 50, ORANGE, GRAY, 'siguiente', BLACK)
     draw_button(200, 500, 150, 50, BLACK, GRAY,  'Regresar', WHITE)
     pygame.display.update()
+
+def show_desplazamientos():
+    window.fill(BLUE)
+    show_text('Desplazamientos', fuente_titulo, BLACK, 250, 50)
+    show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
+    show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
+    show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
+    draw_grid()
+    draw_button(450, 500, 150, 50, ORANGE, GRAY, 'siguiente', BLACK)
+    draw_button(200, 500, 150, 50, BLACK, GRAY,  'Regresar', WHITE)
     pygame.display.update()
+
+def show_sentadillas():
+    window.fill(BLUE)
+    show_text('Sentadillas', fuente_titulo, BLACK, 300, 50)
+    show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
+    show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
+    show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
+    draw_grid()
+    draw_button(450, 500, 150, 50, ORANGE, GRAY, 'siguiente', BLACK)
+    draw_button(200, 500, 150, 50, BLACK, GRAY,  'Regresar', WHITE)
+    pygame.display.update()
+
+def show_flexionDeRodilla():
+    window.fill(BLUE)
+    show_text('Flexion de Rodilla', fuente_titulo, BLACK, 250, 50)
+    show_text("Acuéstate boca abajo, manos a la altura de los hombros y cuerpo recto,", fuente_texto2, BLACK, 50, 100)
+    show_text("Baja Flexionando los codos y baja el pecho hacia el suelo.", fuente_texto2, BLACK, 50, 125)
+    show_text("Sube, Empujando con las manos para volver a la posición inicial.", fuente_texto2, BLACK, 50, 150)
+    draw_grid()
+    draw_button(450, 500, 150, 50, ORANGE, GRAY, 'Finalizar', BLACK)
+    draw_button(200, 500, 150, 50, BLACK, GRAY,  'Regresar', WHITE)
+    pygame.display.update()
+
+
+
 # Mostrar ejercicio
 # def show_exercise(name, frames_gif): 
 #     global frame_actual
@@ -186,21 +240,22 @@ while running:
         show_CurlBicep()
     elif view == 'Plancha':
         show_plancha()
-        exercise
+    elif view == 'Felicitaciones':
+        show_congratulations()
+    elif view == 'ExtensionRodillas':
+        show_extensionRodillas()
+    elif view == 'Desplazamientos':
+        show_desplazamientos()
+    elif view == 'Sentadillas':
+        show_sentadillas()
+    elif view == 'FlexionRodillas':
+        show_flexionDeRodilla()
+
     # elif view == 'exercise':
     #     show_exercise('Press de banca', frames_gif)
 
     #Obtener posicion mouse
     mouse_pos = pygame.mouse.get_pos()
-
-    # print(mouse_pos)
-    # print(view)
-
-    #Efecto hover boton 
-    if 100 <= mouse_pos[0] <= 250 and 200 <= mouse_pos[1] <= 250:
-        color_buttom = GREEN_BLACK
-    else:
-        color_buttom = GREEN
 
     #Obtener eventos
     for event in pygame.event.get():
@@ -211,37 +266,64 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
           
           if view == 'menu':
-              if 100 <= mouse_pos[0] <= 250 and 200 <= mouse_pos[1] <= 250:
+              if 100 <= mouse_pos[0] <= 250 and 200 <= mouse_pos[1] <= 250: # Ventana de ejercicios de tren superior 
                   view = 'pushUp'
-              elif 600 <= mouse_pos[0] <= 750 and 500 <= mouse_pos[1] <= 550:
+              elif 100 <= mouse_pos[0] <= 250 and 450 <= mouse_pos[1] <= 500: # Ventana de ejercicios de tren inferior 
+                  view = 'ExtensionRodillas'
+              elif 600 <= mouse_pos[0] <= 750 and 500 <= mouse_pos[1] <= 550: # Boton de salir
                   running = False
-
-            
+           
           elif view == 'pushUp':
-               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu boton regresar
+               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu principal
                   view = 'menu'
-               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550:
+               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #Condicion para ir al siguiente ejercicio
                   view = "presbanca"
                
           elif view == 'presbanca':
-             if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550:
+             if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #condicion para el ejercio anterior
                   view = 'pushUp'
-             elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550:
+             elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #condicion para el siguiente ejercicio
                   view = 'CurlBicep'
              
-             elif view == 'CurlBicep':
-              if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550:
-                  view = 'presbanca'
-             elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550:
-                  view = 'Plancha'
+          elif view == 'CurlBicep':
+            if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550:
+                view = 'presbanca'
+            elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550:
+                view = 'Plancha'
              
-             elif view == 'Plancha':
-              if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550:
-                  view = 'curlBicep'
-             elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550:
-                  view = ""
-             
+          elif view == 'Plancha':
+              if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #condicion para ir al ejercicio anterior 
+                  view = 'CurlBicep'
+              elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #condición para finalizar la rutina 
+                  view = "Felicitaciones"
+          
+          elif view == 'Felicitaciones':
+                if 300 <= mouse_pos[0] <= 500 and 450 <= mouse_pos[1] <= 550:
+                    view = "menu"
+
+          elif view == 'ExtensionRodillas':
+               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu principal
+                  view = 'menu'
+               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #Condicion para ir al siguiente ejercicio
+                  view = "Desplazamientos"  
+
+          elif view == 'Desplazamientos':
+               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu principal
+                  view = 'ExtensionRodillas'
+               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #Condicion para ir al siguiente ejercicio
+                  view = 'Sentadillas'  
+
+          elif view == 'Sentadillas':
+               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu principal
+                  view = 'Desplazamientos'
+               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #Condicion para ir al siguiente ejercicio
+                  view = 'FlexionRodillas'
         
+          elif view == 'FlexionRodillas':
+               if 200 <= mouse_pos[0] <= 350 and 500 <= mouse_pos[1] <= 550: #Condicion para regresar al menu principal
+                  view = 'Sentadillas'
+               elif 450 <= mouse_pos[0] <= 600 and 500 <= mouse_pos[1] <= 550: #Condicion para ir al siguiente ejercicio
+                  view = "Felicitaciones"
 
 # # Menú de partes del cuerpo
 # def mostrar_menu_partes_cuerpo():

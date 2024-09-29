@@ -1,45 +1,6 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Pygame specific
-*.log
-*.db
-
-# MacOS specific files
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnail cache files
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Custom user settings
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Virtual environments
 env/
 venv/
 ENV/
 ENV.bak/
 venv.bak/
 .venv/
-# Pipenv
-Pipfile.lock
-
-# PyCharm
-/.idea/
-*.iml
